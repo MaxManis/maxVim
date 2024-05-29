@@ -22,3 +22,6 @@ require("lazy").setup("plugins")
 
 -- Autocmds:
 require("autocmd")
+
+-- Custom commands:
+require("commands")

@@ -32,7 +32,7 @@ git clone git@github.com:MaxManis/maxVim.git
 rm nvim && ln -s ./maxNvim nvim
 ```
 
-4. Start your Nvim:
+4. Start your Nvim (you should see Lazy installing all the plugings):
 
 ```bash
 nvim
@@ -88,6 +88,29 @@ Move to window using the `<ctrl>` + `hjkl` keys:
 - **Buffers:** `<leader>fb`: `builtin.buffers`
 - **Help Tags:** `<leader>fh`: `builtin.help_tags`
 
+## Custom commands
+
+### Linting
+
+- `:EslintFix` - **run ESLint for current open file with --fix option** (`npx eslint ./file --fix`)
+
+## Config structure:
+
+All the config is under `./lua` dir inside of the root dir `</maxVim/lua>`.
+You can find all the imports in `./<maxVim>/init.lua` file.
+
+### ./lua dir structure
+
+- **base.lua** - base Vim settings and configs
+
+- **autocmd.lua** - autocommads that run in the background deppends on some actions or events (`BufWritePre`, `VimEnter`, etc)
+
+- **commands.lua** - custom commands for Vim that you can run right in the editor (`EslintFix`)
+
+- **keymap.lua** - keys remapping and shortcuts are here
+
+- **plugins/<plugin_name>.lua** - all of the plugins configs are inside `./plugins` dir and splited to a separate files based on plugin (like `none-ls`, `lualine`) or baseed on feature (like `lsp-config`, `completions`, `comments` etc)
+
 ## Plugins
 
 ### UI Enhancements
@@ -139,9 +162,3 @@ Move to window using the `<ctrl>` + `hjkl` keys:
 ### Plugin Manager
 
 - **[lazy.nvim](https://github.com/folke/lazy.nvim)**: A modern, fast, and extensible plugin manager for Neovim.
-
-````
-
-```
-
-```
