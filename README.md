@@ -6,15 +6,35 @@ MaxVim is a custom configuration for NeoVim created from scratch.
 
 ## Installation
 
-0. `brew install neovim`bash - install NeoVim first
+0. Install NeoVim first:
 
-1. `cd && cd .config`bash - cd to config dir
+```bash
+brew install neovim
+```
 
-2. `git clone <REPO_URL>`bash - clone git repo with config
+1. cd to config dir:
 
-3. `rm nvim && ln -s ./maxNvim nvim`bash - create a soft link to your Nvim config
+```bash
+cd && cd .config
+```
 
-4. `nvim` - start your Nvim
+2. Clone git repo with config:
+
+```bash
+git clone git@github.com:MaxManis/maxVim.git
+```
+
+3. Create a soft link to your Nvim config:
+
+```bash
+rm nvim && ln -s ./maxNvim nvim
+```
+
+4. Start your Nvim:
+
+````bash
+nvim```
+
 
 ## Health Check
 
@@ -117,3 +137,9 @@ Move to window using the `<ctrl>` + `hjkl` keys:
 ### Plugin Manager
 
 - **[lazy.nvim](https://github.com/folke/lazy.nvim)**: A modern, fast, and extensible plugin manager for Neovim.
+
+````
+
+```
+
+```
