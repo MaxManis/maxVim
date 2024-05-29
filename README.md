@@ -1,4 +1,6 @@
-# MaxVim
+# ⛩️ MaxVim ⛩️
+
+<img width="630" alt="Screenshot 2024-05-29 at 15 32 21" src="https://github.com/MaxManis/maxVim/assets/89999954/155a4146-41ca-44e1-8cf7-ab0adbb30012">
 
 ## Overview
 
@@ -32,9 +34,9 @@ rm nvim && ln -s ./maxNvim nvim
 
 4. Start your Nvim:
 
-````bash
-nvim```
-
+```bash
+nvim
+```
 
 ## Health Check
 
