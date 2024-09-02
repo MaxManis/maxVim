@@ -38,6 +38,10 @@ rm nvim && ln -s ./maxNvim nvim
 nvim
 ```
 
+**Installation Tips:**
+
+- `brew install ripgrep` - for installing repgrep
+
 ## Health Check
 
 `:LspInfo` to check your LSPs are available and configured successfully
@@ -49,6 +53,15 @@ nvim
 `:checkhealth` run vim health checker
 
 ## Key Mappings
+
+### Movements
+
+Move cursor faster with `<Tab>` + `hjkl` keys:
+
+- **Go Left 5 times:** `<Tab>h`: `hhhhh`
+- **Go Lower 5 times:** `<Tab>j`: `jjjjj`
+- **Go Upper 5 times:** `<Tab>k`: `kkkkk`
+- **Go Right 5 times:** `<Tab>l`: `lllll`
 
 ### Window Navigation
 
@@ -88,11 +101,29 @@ Move to window using the `<ctrl>` + `hjkl` keys:
 - **Buffers:** `<leader>fb`: `builtin.buffers`
 - **Help Tags:** `<leader>fh`: `builtin.help_tags`
 
+### Oil.nvim
+
+- map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
+### General
+
+- **Quit ALL (close all):** `<leader>qq`: `<cmd>qa<cr>`
+
 ## Custom commands
 
 ### Linting
 
 - `:EslintFix` - **run ESLint for current open file with --fix option** (`npx eslint ./file --fix`)
+
+### Git
+
+- `:GitDiff` - **Git Diff** (`git diff`)
+
+- `:GitStatus` - **Git Status** (`git status`)
+
+### Other
+
+- `:FilePwd` - **Get File Path** (`echo <file-path>`)
 
 ## Config structure:
 
@@ -140,6 +171,7 @@ You can find all the imports in `./<maxVim>/init.lua` file.
 
 - **[neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)**: A Neovim plugin to browse the file system and other tree structures.
 - **[nvim-blame-line](https://github.com/ahmedkhalf/project.nvim)**: Show git blame information in the Neovim statusline.
+- **[oil.nvim](https://github.com/stevearc/oil.nvim)**: A Neovim plugin to edit the file system and files as a regular Vim Buffer (just as a file).
 
 ### Treesitter
 
@@ -154,6 +186,7 @@ You can find all the imports in `./<maxVim>/init.lua` file.
 
 - **[plenary.nvim](https://github.com/nvim-lua/plenary.nvim)**: All the lua functions you don't want to write twice.
 - **[nui.nvim](https://github.com/MunifTanjim/nui.nvim)**: UI component library for Neovim.
+- **[vim-illuminate](https://github.com/RRethy/vim-illuminate)**: Plugin for highlighting code under cursore.
 
 ### Comments
 
